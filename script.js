@@ -1,3 +1,6 @@
+const { JSDOM } = require('jsdom');
+const { window } = new JSDOM(`<!DOCTYPE html><html><body><input type="text" id="text-input"><button onclick="checkPalindrome()">Check Palindrome</button></body></html>`);
+const { document } = window;
 const textInput = document.getElementById("text-input");
 const checkBtn = document.getElementById("check-btn");
 const resultElm = document.getElementById("result");
